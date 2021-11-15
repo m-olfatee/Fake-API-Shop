@@ -1,0 +1,362 @@
+* {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/* ========================================= HEADER ======================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 200px;
+  margin: 30px;
+}
+/* ========================================= NAVIGATION ===================== */
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+  text-align: center;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+nav a i {
+  background-color: yellowgreen;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+  color: red;
+  font-weight: bolder;
+}
+/* ========================================= CUSTOM BUTTONS ================= */
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn-2 {
+  border: none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+}
+
+.btn-2 span {
+  background: #00acee;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#00acee),
+    to(#027efb)
+  );
+  background: linear-gradient(0deg, #00acee 0%, #027efb 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.btn-2 span:nth-child(1) {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transform: rotateX(90deg);
+  transform-origin: 50% 50% -20px;
+}
+
+.btn-2 span:nth-child(2) {
+  transform: rotateX(0deg);
+  transform-origin: 50% 50% -20px;
+}
+
+.btn-2:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transform: rotateX(0deg);
+}
+
+.btn-2:hover span:nth-child(2) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  color: transparent;
+  transform: rotateX(-90deg);
+}
+
+.btn-3 {
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(155, 155, 155) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  margin-right: 15px;
+  border: none;
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover {
+  color: rgb(51, 51, 51);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+/* ========================================= HOME =========================== */
+.home {
+  height: 80vh;
+}
+.home h2,
+.home h3 {
+  text-align: center;
+  padding: 50px;
+}
+/* ========================================= PRODUCTS ======================= */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin: 5%;
+}
+.products li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  border: 5px solid black;
+  box-shadow: 5px 10px 10px rgba(66, 11, 11, 0.192);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+.products li img {
+  max-height: 200px;
+  max-width: 200px;
+  object-fit: cover;
+  margin: 5% 0 5% 0;
+}
+.products li button {
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  height: 30px;
+  margin-top: 20px;
+  font-size: 2rem;
+  height: 40px;
+  border: none;
+  transition: 1s ease;
+  color: rgb(0, 0, 0);
+}
+.products li button:hover {
+  background-color: gray;
+  color: white;
+}
+/* ========================================= CART =========================== */
+.cartItem {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.cartItem img {
+  max-height: 150px;
+  max-width: 100px;
+  margin: 20px;
+  object-fit: cover;
+}
+.cartItem section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+/* ========================================= ABOUT ========================== */
+.about {
+  padding: 5%;
+  margin-top: 5%;
+}
+.about h2 {
+  margin-bottom: 5%;
+}
+.about p {
+  text-align: justify;
+  margin-bottom: 5%;
+}
+/* ========================================= CONTACT ======================== */
+.contact {
+  margin: 5rem;
+}
+.contact h2 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin: 5rem 0;
+}
+.contact form {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+.contact textarea {
+  display: block;
+  border-radius: 5px;
+  width: 100%;
+}
+/* ========================================= DETAIL ========================= */
+.details {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 10vh;
+}
+.details h2 {
+  margin: 5px;
+}
+.details img {
+  max-width: 400px;
+  max-height: 500px;
+  text-align: center;
+  margin: 25px auto 25px;
+}
+.details p {
+  padding: 20px 50px 10px 50px;
+}
+.details button {
+  margin: 0 auto;
+}
+/* ========================================= FOOTER ========================= */
+footer {
+  position: fixed;
+  background-color: black;
+  color: yellowgreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  bottom: 0;
+  border-top: 2px solid gray;
+  width: 100%;
+  height: 5%;
+}
+footer h3 {
+  font-size: 1.2rem;
+}
+.copyright {
+  color: yellowgreen;
+  margin-right: 10px;
+}
+/* ========================================= MEDIA ========================== */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .logo {
+    width: 100px;
+    margin: 5px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .logo {
+    width: 200px;
+    margin: 30px;
+  }
+}
